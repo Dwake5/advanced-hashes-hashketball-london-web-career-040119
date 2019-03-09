@@ -118,12 +118,13 @@ end
 
 def player_numbers(team_name)
   array = []
-  game_hash.each do |location, attribute|
+  game_hash.each do |location, attributes|
     if game_hash[location].values.include?(team_name)
-      attribute.each do |thing, info|
-        info.each do |stat, number|
+      attributes.each do |thing, info|
+        info.each do |player, stats|
+          stats.each do |stat, int|
           if stat == :number
-            array << number.to_i
+            array << int.to_i
           end
         end
       end
