@@ -184,11 +184,12 @@ def team_names
 array
 end
 
-def player_stats(player)
-  game_hash.each do |location, attributes|
-    attributes.each do |attribute, info|
-      if info.include?(player)
-       return hash[location][attribute][player]
+def player_stats(name)
+  hash = game_hash
+  hash.each do |location, attributes| 
+    attributes.each do |attribute, info| 
+      if info.include?(name) 
+       return hash[location][attribute][name]
       end
     end
   end
