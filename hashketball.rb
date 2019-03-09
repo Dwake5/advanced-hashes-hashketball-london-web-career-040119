@@ -185,11 +185,11 @@ array
 end
 
 def player_stats(player)
-  game_hash.each do |location, attributes| 
-    attributes.each do |attribute, info| 
-      if info.include?(player) 
+  game_hash.each do |location, attributes|
+    attributes.each do |attribute, info|
+      if info.include?(player)
        return hash[location][attribute][player]
       end
     end
-  end  
+  end
 end
