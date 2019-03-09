@@ -123,11 +123,11 @@ def player_numbers(team_name)
       attributes.each do |thing, info|
         if info.class == Hash
           info.each do |player, stats|
-
-              if player == :number
-                array << stats.to_i
+            stats.each do |stat, int|
+              if stat == :number
+                array << int.to_i
               end
-
+            end
           end
         end
       end
@@ -182,4 +182,14 @@ def team_names
     end
   end
 array
+end
+
+def player_stats(player)
+  game_hash.each do |location, attributes| 
+    attributes.each do |attribute, info| 
+      if info.include?(player) 
+       return hash[location][attribute][player]
+      end
+    end
+  end  
 end
