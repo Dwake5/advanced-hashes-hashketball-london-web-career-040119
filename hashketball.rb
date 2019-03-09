@@ -116,6 +116,24 @@ def game_hash
 end
 
 
+def player_numbers(team_name)
+  array = []
+  game_hash.each do |location, attribute|
+    if game_hash[location].values.include?(team_name)
+      attribute.each do |thing, info|
+        if thing == :number
+          array << info
+        end
+      end
+    end
+  end
+  return array
+end
+    
+  
+  
+
+
 def team_colors(team)
   game_hash.each do |location, color|
     if game_hash[location].values.include?(team)
@@ -162,3 +180,6 @@ def team_names
   end
 array
 end
+
+
+
