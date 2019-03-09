@@ -123,11 +123,11 @@ def player_numbers(team_name)
       attributes.each do |thing, info|
         if info.class == Hash
           info.each do |player, stats|
-          
+
               if player == :number
                 array << stats.to_i
               end
-            
+
           end
         end
       end
