@@ -129,9 +129,9 @@ def player_numbers(team_name)
   end
   return array
 end
-    
-  
-  
+
+
+
 
 
 def team_colors(team)
@@ -180,6 +180,3 @@ def team_names
   end
 array
 end
-
-
-
