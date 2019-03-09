@@ -123,8 +123,9 @@ def player_numbers(team_name)
       attributes.each do |thing, info|
         info.each do |player, stats|
           stats.each do |stat, int|
-          if stat == :number
-            array << int.to_i
+            if stat == :number
+              array << int.to_i
+            end
           end
         end
       end
