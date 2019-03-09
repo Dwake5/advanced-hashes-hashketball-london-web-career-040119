@@ -162,5 +162,3 @@ def team_names
   end
 array
 end
-
-
